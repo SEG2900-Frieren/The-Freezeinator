@@ -10,3 +10,5 @@ Samuel Cai - 300474838
 Thomas Coulter - 300474108
 Zayd El Alaoui - 300470197
 Zen Canham - 300487696
+
+Poppins font © 2014–2017 Indian Type Foundry, licensed under the SIL Open Font License, Version 1.1. See http://scripts.sil.org/OFL for details.
