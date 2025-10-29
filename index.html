@@ -11,7 +11,18 @@
         text-decoration: none;
       }
       .navbar{
-        background:#D3F2ED; font-family:'Poppins', sans-serif; font-size: 20px;
+        position: fixed;              
+        top: 30px;                
+        left: 50%;                     
+        transform: translateX(-50%);    
+        background: rgba(211, 242, 237, 0.85); 
+        backdrop-filter: blur(12px);   
+        border-radius: 25px;          
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        padding: 12px 40px;
+        z-index: 9999;
 
       }
       .navdiv{
@@ -19,16 +30,21 @@
       }
       ul{
         list-style-type: none;
+        display: flex;
+        gap: 30px;
         margin: 0;
         padding: 0;
       }
-      li{
-        display: inline-block;
-        margin-right: 30px;
-        position: relative;
+
+      li a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s
       }
-      .navbar ul li a:hover {
-        color: var(--colour-primary);
+      li a:hover {
+        color: #85bcff;
+        text-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
       }
 
       .dropdown__navbar {
@@ -36,8 +52,8 @@
         position: absolute;
         left: 0;
         top: 100%;
-        background-color: rgba(202, 251, 251, 0.572);
-        border-radius: 5px;
+        background-color: rgba(202, 251, 251, 0.8);
+        border-radius: 8px;
         overflow: hidden;
         opacity: 0;
         transform: translateY(-10px);
@@ -48,6 +64,7 @@
       .dropdown__navbar ul {
         display: block;
         margin: 0;
+        padding: 0;
 
       }
 
@@ -65,13 +82,11 @@
 
       .navbar ul li:hover .dropdown__navbar {
         display: block;
-        opacity: 5;
+        opacity: 1;
         transform: translateY(0);
-      }
-
-      
+      }  
     </style>
-  </head>
+</head>
 <body>
   <nav class="navbar">
     <div class="navdiv">
