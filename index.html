@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Main-->
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,7 +10,8 @@
         text-decoration: none;
       }
       .navbar{
-        background:#D3F2ED; font-family: Trebuchet MS; font-size: 20px;
+        background:#D3F2ED; font-family:'Poppins', sans-serif; font-size: 20px;
+
       }
       .navdiv{
         display:flex;align-items:center;justify-content:space-between;
@@ -22,7 +24,50 @@
       li{
         display: inline-block;
         margin-right: 30px;
+        position: relative;
       }
+      .navbar ul li a:hover {
+        color: var(--colour-primary);
+      }
+
+      .dropdown__navbar {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: rgba(202, 251, 251, 0.572);
+        border-radius: 5px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+        z-index: 10;
+      }
+
+      .dropdown__navbar ul {
+        display: block;
+        margin: 0;
+
+      }
+
+      .dropdown__navbar ul li {
+        display: block;
+        width: 150px;
+        padding: 10px 20px;
+        text-align: left;
+      }
+
+      .dropdown__navbar ul li:hover {
+        background-color: aliceblue;
+
+      }
+
+      .navbar ul li:hover .dropdown__navbar {
+        display: block;
+        opacity: 5;
+        transform: translateY(0);
+      }
+
       
     </style>
   </head>
@@ -34,14 +79,21 @@
         <li><a href="">Home</a></li>
         <li><a href="Product-Features.html">Product Features</a></li>
         <li><a href="Pricing.html">Pricing</a></li>
-        <li><a href="Team.html">Team</a></li>
-        <li><a href="Career.html">Career</a></li>
-        <li><a href="Contacts.html">Contacts</a></li>
+        <li>
+          <a href="Team.html">Team <i class="fas fa-caret-down"></i> </a>
+            <div class="dropdown__navbar">
+              <ul>
+                <li><a href="Contacts.html">Contacts </a> </li>
+                <li><a href="Career.html">Career</a></li>
+              </ul>
+            </div>
+        </li>
       </ul>
     </div>
   </nav>
   <link rel="stylesheet" href="gradient.css">
   <h1>The Freezeinator 2.0</h1>
+	
   <img style="float:left; margin-left:30px;" src="placeholder.png" alt="this is a placeholder image" width="671" length="410">
   <p style="font-size: 30px; background: white;">The Freezeinator is a Kitchen Appliance that allows customers to rapidly freeze items at different specified temperatures. It is a time saver that would make anybody’s life that much cooler.</p>
 </body>
