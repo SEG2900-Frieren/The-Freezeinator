@@ -28,11 +28,6 @@
     .navdiv{
         display:flex;align-items:center;justify-content:space-between;
     }
-    .logo-img{
-        padding-top:1%;
-        width:auto;
-        height:90%;
-    }
     ul{
         list-style-type: none;
         display: flex;
@@ -99,7 +94,7 @@
         align-self: end;
         margin-top: 20%; 
         font-size: 180%;
-        transform: translateX(-19%);
+        transform: translateX(-15%);
         font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
     .text-box {
@@ -117,7 +112,7 @@
         justify-content: center;
         align-items: center;
         z-index: 10;
-        transform: translateX(8%);
+        transform: translateY(8%) translateX(-8%);
     }
 
     model-viewer {
