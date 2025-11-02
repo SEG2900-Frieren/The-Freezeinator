@@ -126,65 +126,6 @@ model-viewer {
     font-size:1.9rem;
 }
 
-/*
-=============================
-    Pruduct Features Page
-=============================
-*/
-
-main {
-    max-width: 1500px;
-    margin: 4rem auto 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.features-intro {
-    color: #444;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-.feature {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.293);
-    transition: transform 0.1s;
-}
-.feature:hover {
-    transform: translateY(-5px);
-}
-.feature h2 {
-    color: hsl(213, 49%, 41%);
-    margin-bottom: 10px;
-}
-.feature p {
-    color: #444;
-    line-height: 1.5;
-}
-
-@media (max-width: 550px) {
-  .features {
-    grid-template-columns: 1fr;
-    }
-  .feature:hover {
-    transform: scale(1.05);
-    background: #e8e8e881;
-  }
-}
-
-@media (min-width: 981px) {main {padding-top: 1rem;}}
 @media (max-width: 900px) { /* for when tab not wide */
     .big-box {
         grid-template-areas:
