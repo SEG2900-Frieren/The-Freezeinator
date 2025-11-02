@@ -126,6 +126,12 @@ model-viewer {
     font-size:1.9rem;
 }
 
+/*
+=============================
+    Pruduct Features Page
+=============================
+*/
+
 main {
     max-width: 1500px;
     margin: 0 auto;
@@ -167,6 +173,16 @@ h1 {
     line-height: 1.5;
 }
 
+@media (max-width: 550px) {
+  .features {
+    grid-template-columns: 1fr;
+    }
+  .feature:hover {
+    transform: scale(1.05);
+    background: #e8e8e881;
+  }
+}
+
 @media (min-width: 980px) {main {padding-top: 1rem;}}
 @media (max-width: 900px) { /* for when tab not wide */
     .big-box {
@@ -199,14 +215,4 @@ h1 {
     .model-3d {
         transform: none;
     }
-}
-
-@media (max-width: 550px) {
-  .features {
-    grid-template-columns: 1fr;
-    }
-  .feature:hover {
-    transform: scale(1.05);
-    background: #e8e8e881;
-  }
 }
