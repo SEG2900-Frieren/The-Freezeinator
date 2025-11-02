@@ -134,8 +134,9 @@ model-viewer {
 
 main {
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
     padding: 40px 20px;
+    text-align: center;
 }
 
 h1 {
@@ -183,7 +184,7 @@ h1 {
   }
 }
 
-@media (min-width: 980px) {main {padding-top: 1rem;}}
+@media (min-width: 981px) {main {padding-top: 1rem;}}
 @media (max-width: 900px) { /* for when tab not wide */
     .big-box {
         grid-template-areas:
