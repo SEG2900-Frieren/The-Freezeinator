@@ -135,19 +135,21 @@
             gap: 1rem;
             justify-items: center;
             padding: 1rem;
-            transform: translateY(-15%);
+            transform: translateY(0);
         }
         .title {
             grid-area: title;
             text-align: center;
+            font-size: 1.3rem;
             align-self: center;
-            transform: translateY(72.5%) translateX(0); 
+            transform: translateY(130%) translateX(0); 
             z-index: 2; 
         }
         .text-box {
             grid-area: textbox;
             text-align: center;
             align-self: center;
+            font-size: 1.3rem;
             transform: translateY(-12%) translateX(0);
             z-index: 1;
         }
