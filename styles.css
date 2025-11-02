@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -51,7 +51,7 @@ h1 {
   line-height: 1.5;
 }
 
-@media (min-width: 980px) {body {padding-top: 2rem;}}
+@media (min-width: 980px) {main {padding-top: 1rem;}}
 @media (max-width: 550px) {
   .features {grid-template-columns: 1fr;}
   .feature:hover {
