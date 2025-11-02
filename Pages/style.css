@@ -135,6 +135,7 @@
             gap: 1rem;
             justify-items: center;
             padding: 1rem;
+            transform: translateY(-15%);
         }
         .title {
             grid-area: title;
