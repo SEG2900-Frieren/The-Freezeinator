@@ -147,7 +147,7 @@
             grid-area: textbox;
             text-align: center;
             align-self: center;
-            transform: translateY(-15%) translateX(0);
+            transform: translateY(-12%) translateX(0);
             z-index: 1;
         }
         .model-3d {
