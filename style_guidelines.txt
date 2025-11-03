@@ -1,0 +1,36 @@
+Base rules :
+
+Reset all elements: * { margin:0; padding:0; box-sizing:border-box; text-decoration:none; }
+Fonts: 'arial', "Comic Sans MS", "Comic Sans", cursive
+Use rem/% for scalable sizing; avoid fixed pixels when possible
+
+For the Body :
+
+min-height: 100vh
+Background: linear-gradient(to right, rgba(127,95,95,0), rgba(119,160,247,0.548))
+
+For the NavBar
+Fixed top center: position: fixed; top: 30px; left: 50%; transform: translateX(-50%);
+Style: semi-transparent white, rounded corners, box-shadow, font-size 20px, padding 12px 40px
+Links: black text, 0.3s hover transition to hsl(213,100%,76%), font-weight 500
+Dropdown :hidden by default, appears on hover, background rgba(202,251,251,0.8), rounded 8px, menu items highlight aliceblue
+
+Home Page layer :
+Desktop grid: "model title" "model textbox", 2 columns
+For Mobile (<900px): single column "title" "model" "textbox"
+Use gap, padding, and transforms for positioning
+
+For the Title :
+
+Font: Comic Sans, centered, font-size 180% (desktop), 130% (mobile)
+Positioned with transform to align with 3D model
+
+Text Box 
+Font-size 1.3rem, line-height 1.5
+Left-aligned on desktop, centered on mobile
+Positioned using transform
+
+3D Model : ( Ask sam )
+
+Centered with flex, grid area model
+Responsive width: clamp(400px, 50vw, 800px), aspect ratio 4/3
