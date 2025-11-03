@@ -57,5 +57,18 @@
         <p class="intro-text">The Freezeinator 2.0 is a kitchen appliance that allows customers to rapidly freeze items at different specified temperatures. It is a time saver that would make anybody’s life that much cooler.</p>
     </div>
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    let pos = 0; 
+    setInterval(() => {
+        document.body.style.backgroundImage = `linear-gradient(to right, 
+            rgba(127, 95, 95, 0) ${pos}%, 
+            rgba(119, 160, 247, 0.548) ${pos + 50}%)`;
+
+        pos += 0.5; 
+        if (pos > 100) pos = 0; 
+    }, 30); 
+});
+</script>
 </body>
 </html>
