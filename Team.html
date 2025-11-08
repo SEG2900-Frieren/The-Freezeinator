@@ -85,7 +85,70 @@
         opacity: 1;
         transform: translateY(0);
       }  
+      .team_section{
+        width: 100%;
+        height: auto;
+        padding: 1200px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
+      .team_section .heading{
+        font: 25px;
+        color: aquamarine;
+        font-weight: 500;
+        margin-bottom: 3px;
+
+      }
+
+      .team_section p {
+        font-size: 14px;
+        font-weight: 300;
+        color: blueviolet;
+      }
+
+      .team_section .sub_heading{
+
+        margin-bottom: 140px;
+      }
+
+      .container{
+        width: 100px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 120px 60px;
+
+      }
+
+      .team{
+        padding: 100px 30px 30px 30px;
+        border-radius:7px;
+        box-shadow: 5px 5px 5px #cfeaee63;
+        position: relative;
+        text-align: center;
+      }
+
+      .team .img{
+        position: absolute;
+        width: 160px;
+        height: 160;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 120px 60px 60px 60px;
+        overflow: hidden;
+        box-shadow: 5px 6px 18px #c7e8ed44 ;
+
+      }
+
+      .team .img img{
+
+        width: 100%;
+        height: auto;
+
+      }
       
     </style>
   </head>
@@ -96,12 +159,8 @@
         <li><a href="Product-Features.html">Product Features</a></li>
         <li><a href="Pricing.html">Pricing</a></li>
         <li>
-          <a href="">About<i class="fas fa-caret-down"></i> </a>
-            <div class="dropdown__navbar">
-              <ul>
-                <li><a href="Team.html">Team</a> </li>
-                <li><a href="Contactshtml">Contacts</a></li>
-                <li><a href="Career.html">Career</a></li>
+        <li><a href="Team.html">Team</a> </li>
+        <li><a href="Career.html">Career</a></li>
               </ul>
             </div>
         </li>
@@ -136,6 +195,9 @@
               </ul>
             </div>
             <div class="team">
+              <div>
+                <img src="/Photo1.jpg">
+              </div>
               <h3>Kethya Pessi</h3>
               <p class="role">UI designer</p>
               <p class="para"> Does websites? idk man, she good 11/10.</p>
@@ -176,50 +238,6 @@
               </ul>
             </div>
         </div>
-            <style type="text/css"> 
-              *{
-
-              }
-              .team_section{
-                width: 100%;
-                height: auto;
-                padding: 1200px 100px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-              }
-
-              .team_section .heading{
-                font: 25px;
-                color: aquamarine;
-                font-weight: 500;
-                margin-bottom: 3px;
-
-              }
-
-              .team_section p {
-                font-size: 14px;
-                font-weight: 300;
-                color: blueviolet;
-              }
-
-              .container{
-                width: 100px;
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-                grid-gap: 120px 100px;
-
-              }
-
-              .team{
-                padding: 100px 30px 30px 30px;
-                border-radius:7px;
-                box-shadow: 5px 5px 5px #a4e5ed;
-              }
-
-            
-            </style>
       </div>
 </body>
 </html>
