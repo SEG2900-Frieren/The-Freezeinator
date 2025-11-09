@@ -4,71 +4,139 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Frieren Appliances</title>
     <link rel="stylesheet" href="Pages/style.css">
+    <link rel="stylesheet" href="Pages/Product-Features_styles.css">
   </head>
 
+
 <body>
+  <img src="HomeImages/bonnet-removebg-preview.png" class="bonnet">
+  <h1 class="page-title">
+    <span class="line1">FREEZE FAST</span><br>
+    <span class="line2">LIVE EASY.</span>
+  </h1>
+    <div class="finisher-header"></div>
     <nav class="navbar">
     <div class="navdiv">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="Pages/Product-Features.html">Product Features</a></li>
-        <li><a href="Pages/Pricing.html">Pricing</a></li>
-        <li>
-          <a href="Pages/Team.html">Team <i class="fas fa-caret-down"></i> </a>
-            <div class="dropdown__navbar">
-              <ul>
-                <li><a href="Pages/Contacts.html">Contacts </a> </li>
-                <li><a href="Pages/Career.html">Career</a></li>
-              </ul>
-            </div>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Product Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#team">Team</a></li>
       </ul>
     </div>
   </nav>
-  <div class = "big-box"> 
-    <div class="title">
-        <h1>The Freezeinator 2.0</h1>
-    </div>
-    <div class="model-3d">
-      <div>
-         <model-viewer id="freezeinator"
-          src="HomeImages/The Freezeinator.glb"
-          camera-controls
-          disable-pan
-          disable-zoom
-          tone-mapping="neutral"
-          poster="poster.webp"
-          shadow-intensity="1"
-          auto-rotate
-          environment-image="HomeImages/aircraft.hdr"
-          min-camera-orbit="auto 44deg 5.89m"
-          max-camera-orbit="auto 135deg auto"
-          min-field-of-view="30deg"
-          camera-orbit="60deg 60deg" 
-          interaction-prompt="none"
-          alt="The Freezeinator">
-        </model-viewer>
+  <section id="home">
+    <div class = "big-box"> 
+      <div class="title">
+          <h1>The Freezeinator 2.0</h1>
+      </div>
+      <div class="model-3d">
+          <model-viewer id="freezeinator"
+            src="HomeImages/The Freezeinator.glb"
+            camera-controls
+            disable-pan
+            disable-zoom
+            tone-mapping="neutral"
+            poster="poster.webp"
+            shadow-intensity="1"
+            auto-rotate
+            environment-image="HomeImages/aircraft.hdr"
+            min-camera-orbit="auto 44deg 5.89m"
+            max-camera-orbit="auto 135deg auto"
+            min-field-of-view="30deg"
+            camera-orbit="60deg 60deg" 
+            interaction-prompt="none"
+            alt="The Freezeinator">
+          </model-viewer>
       </div>
     </div>
-    <!--<script type="module" src="freezeinator.js"></script> Get this tow ork laterman-->
-    <div class="text-box">
-        <p class="intro-text">The Freezeinator 2.0 is a kitchen appliance that allows customers to rapidly freeze items at different specified temperatures. It is a time saver that would make anybody’s life that much cooler.</p>
-    </div>
-  </div>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-    let pos = 0; 
-    setInterval(() => {
-        document.body.style.backgroundImage = `linear-gradient(to right, 
-            rgba(127, 95, 95, 0) ${pos}%, 
-            rgba(119, 160, 247, 0.548) ${pos + 50}%)`;
+  </section>
 
-        pos += 0.5; 
-        if (pos > 100) pos = 0; 
-    }, 30); 
-});
-</script>
+  <section id="features">
+    <h1>Product Features</h1>
+    <p class="features-intro">
+      The Freezeinator is a cooling device designed to rapidly freeze most foods,
+      from drinks to desserts, with precision and safety in mind. Here are some of its key features:
+    </p>
+    <div class="features">
+      <div class="feature">
+        <h2>AI-Powered Temperature Control</h2>
+        <p>
+          The built-in AI detects the ideal freezing point for any object, automatically adjusting settings 
+          to achieve perfect results without any risk of damage such as freezerburn or early melting.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2>RFT - Rapid Freeze Technology</h2>
+        <p>
+          Freeze liquids, foods, or certain compatible materials in under 60 seconds using advanced thermodynamic cooling. 
+          Perfect for quick snacks or science experiments. Tested and able to make ice cream in under half a minute!
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2>Various Cooling Modes</h2>
+        <p>
+          Switch between modes like “Instant Chill,” “Deep Freeze,” and “Soft Cool” as desired.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2>Eco-Friendly operations</h2>
+        <p>
+          Uses energy-efficient cooling algorithms and recyclable refrigerant materials to minimize environmental impact.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2>Smart Connectivity</h2>
+        <p>
+          Connect the Freezeinator to your phone via Bluetooth to monitor freezing progress and set custom freeze timers.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2>Safety Lock System</h2>
+        <p>
+          Includes a child-safe locking mechanism and thermal sensors to ensure safe operation at all times.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="pricing">
+    <h1>Pricing</h1>
+    <p>$200</p>
+  </section>
+
+
+  <section id="team">
+    <h1>The Team</h1>
+    <p>Meet our amazing team!!</p>
+    <p>(╯'□')╯︵ ┻━┻</p>
+
+    <center>
+      <h2>Da crew:</h2>
+      <p>CEO & Founder:</p>
+      <p>Engineers:</p>
+      <p>Product Designers:</p>
+      <p>Marketing Director:</p>
+    </center>
+  </section>
+  <script src="Pages/finisher-header.es5.min.js" type="text/javascript"></script>
+  <script src="Pages/style1.js"></script>
+<footer>
+  <ul>
+    <li><a href="Pages/Contacts.html">Contacts</a></li>
+    <li><a href="Pages/Career.html">Career</a></li>
+  </ul>
+</footer>
 </body>
 </html>
