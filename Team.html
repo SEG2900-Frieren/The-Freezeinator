@@ -4,15 +4,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="gradient.css">
-    <style type="text/css">
-       *{
+    <style>
+      *{
         text-decoration: none;
-      }
-      .navbar{
+    }
+    .navbar{
         position: fixed;              
         top: 30px;                
         left: 50%;                     
@@ -25,131 +27,232 @@
         padding: 12px 40px;
         z-index: 9999;
 
-      }
-      .navdiv{
+    }
+    .navdiv{
         display:flex;align-items:center;justify-content:space-between;
-      }
+    }
       ul{
         list-style-type: none;
         display: flex;
         gap: 30px;
         margin: 0;
         padding: 0;
-      }
+    }
 
-      li a {
+    li a {
         color: black;
         text-decoration: none;
         font-weight: 500;
         transition: 0.3s
-      }
-      li a:hover {
+    }
+    li a:hover {
         color: hsl(213, 100%, 76%);
-      }
+    }
 
-      .dropdown__navbar {
-        display: none;
-        position: absolute;
-        left: 0.2;
-        top: 100%;
-        background-color: rgba(202, 251, 251, 0.8);
-        border-radius: 8px;
-        overflow: hidden;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s;
-        z-index: 10;
-      }
-
-      .dropdown__navbar ul {
-        display: block;
-        margin: 0;
-        padding: 0;
-
-      }
-
-      .dropdown__navbar ul li {
-        display: block;
-        width: 150px;
-        padding: 10px 20px;
-        text-align: left;
-      }
-
-      .dropdown__navbar ul li:hover {
-        background-color: aliceblue;
-
-      }
-
-      .navbar ul li:hover .dropdown__navbar {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }  
-      .team_section{
+   
+    .team_section{
         width: 100%;
         height: auto;
-        padding: 1200px 100px;
+        padding: 120px 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-      }
+        overflow-x: hidden;
+        overflow: visible;
+    }
 
-      .team_section .heading{
+    .team_section .heading{
         font: 25px;
-        color: aquamarine;
+        color: rgb(0, 0, 0);
         font-weight: 500;
         margin-bottom: 3px;
 
-      }
+    }
 
-      .team_section p {
+    .team_section p {
         font-size: 14px;
         font-weight: 300;
-        color: blueviolet;
-      }
+        color: rgb(162, 180, 239);
 
-      .team_section .sub_heading{
+    }
+
+    .team_section .sub_heading{
 
         margin-bottom: 140px;
+    }
+
+    .container::-webkit-scrollbar{
+      display: none;
+    }
+
+    .container{
+         display: flex;
+         gap: 60px;
+         overflow: hidden;
+         width: 100%;
+    }
+    .container-inner {
+         display: flex;
+         gap: 60px;
+         animation: scrollTeams 20s linear infinite;
+    }
+
+    @keyframes scrollTeams {
+      0% {
+        transform: translateX(0);
       }
-
-      .container{
-        width: 100px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: 120px 60px;
-
+      100% {
+        transform: translateX(-50%);
       }
+    }
 
-      .team{
+    .carousel {
+      position: relative;
+      width: 80%;
+      margin: 50px auto;
+      overflow: visible;
+
+    }
+
+
+    .team{
+        flex: 0 0 300px;
+        margin: 0 10px;
+        padding-top:  10px;
         padding: 100px 30px 30px 30px;
         border-radius:7px;
-        box-shadow: 5px 5px 5px #cfeaee63;
-        position: relative;
+        box-shadow: 5px 5px 5px #c5dde078;
+        transform-origin: center;
+        transform: scale(0.8);
+        transition: opacity 0.3s, transform 0.3s ease, box-shadow 0.4s ease, filter 0.4s ease;
         text-align: center;
-      }
+        will-change: transform;
+    }
 
-      .team .img{
-        position: absolute;
-        width: 160px;
-        height: 160;
-        top: 0;
+    .team:hover{
+      transform: scale(1.02) rotate(0.5deg);
+      transition: transform 0.3s;
+      box-shadow: 0 0 20px #5d7491d6;
+      filter: brightness(1.05);
+    }
+
+    .team.active{
+      transform: scale(1.3);
+      z-index: 1;
+      
+    }
+
+    .team .img{
+        position: relative;
+        width: 260px;
+        top: 10px;
         left: 50%;
+        margin: 0 auto 20px;
         transform: translate(-50%, -50%);
-        border-radius: 120px 60px 60px 60px;
+        border-radius:120px 60px 60px 60px;
         overflow: hidden;
-        box-shadow: 5px 6px 18px #c7e8ed44 ;
+        box-shadow: 5px 6px 18px #c7d5ed44 ;
 
-      }
+    }
 
-      .team .img img{
+    
+
+    .team .img img{
 
         width: 100%;
         height: auto;
+        border-radius: 50%;
+        /*object-fit: cover;
+        display: block;*/
 
-      }
+    }
+
+    .carousel button {
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f5fcfc17;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 10; 
+
+    }
+
+    .carousel button.prev{
       
+      left: 10px;
+    }
+
+    .carousel button.next{
+      
+      right: 10px;
+
+    }
+
+    .carousel-track{
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      overflow: visible;
+      /*justify-content: center;
+      align-items: center;*/
+
+    }
+
+    .team h3{
+        color: #5d7491d6;
+        margin-bottom: 3px;
+
+    }
+
+    .team .role {
+        margin-bottom: 9px;
+        font-size: 15px;
+    }
+
+    .team .social_links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .team .social_links li {
+
+        list-style: none;
+        width: 40px;
+        height: 40px;
+        border: .8px solid #ffffff3a;
+        margin: 0 4px;
+        border-radius: 50%;
+        color: rgba(186, 231, 231, 0.907);
+        font-size: 20px;
+        display: grid;
+        place-content: center;
+        transition: .6s;
+
+    }
+
+    .team .social_links li:hover {
+
+        background-color: #f1fdff82;
+        color: rgb(194, 216, 233);
+
+    }
+
+    @media only screen and (max-width: 810px) {
+      .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
     </style>
   </head>
   <nav class="navbar">
@@ -167,77 +270,169 @@
       </ul>
     </div>
   </nav>
+  
   <body>
     <div class="team_section">
-        <h3 class="heading">Team Section</h3>
-        <p class="sub_heading">Our talented team members who worked on this product</p>
+        <h3 class="heading"  >Team Section</h3>
+        <p class="sub_heading" >Our talented team members who worked on this product</p>
 
 
-        <div class="container">
-            <div class="team">
+        <div class="carousel">
+          <button class="prev">&#10094;</button>
+          <div class="carousel-track">
+            <div class="team" >
+              <div class="img">
+                <img src="Photo1.png">
+              </div>
               <h3>Daniel He</h3>
               <p class="role">Founder</p>
               <p class="para"> Brilliant mind and leader of the company. </p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
-            <div class="team">
+            <div class="team" >
+              <div class="img">
+                <img src="Photo2.png">
+              </div>
               <h3>Zen Canham</h3>
               <p class="role">UI designer</p>
               <p class="para"> Does websites? idk man, he good 10/10.</p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
-            <div class="team">
-              <div>
-                <img src="/Photo1.jpg">
+            <div class="team" >
+              <div class="img">
+                <img src="/Photo1.png">
               </div>
               <h3>Kethya Pessi</h3>
               <p class="role">UI designer</p>
               <p class="para"> Does websites? idk man, she good 11/10.</p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
-            <div class="team">
+            <div class="team" >
+              <div class="img">
+                <img src="Photo1.png">
+              </div>
               <h3>Samuel Cai</h3>
               <p class="role">CEO</p>
               <p class="para"> Works hard alongside the founder to keep things afloat(?).</p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
             <div class="team">
+              <div class="img">
+                <img src="Photo1.png">
+              </div>
               <h3>Thomas Coulter</h3>
               <p class="role">Product designer?</p>
               <p class="para">The talent behind all of our products.</p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
-            <div class="team">
+            <div class="team" >
+              <div class="img">
+                <img src="Photo1.png">
+              </div>
               <h3>Zayd El Alaoui</h3>
               <p class="role">Product designer</p>
               <p class="para"> i ran out of thigns to say man idk.</p>
-              <ul class="social links">
+              <ul class="social_links">
                 <li><i class="uil uil-linkedin"></i></li>
                 <li><i class="uil uil-instagram"></i></li>
                 <li><i class="uil uil-github"></i></li>
               </ul>
             </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
         </div>
       </div>
 </body>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  let slides = Array.from(track.children);
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  let currentIndex = 1; 
+  let slideWidth = slides[0].offsetWidth + 60; 
+
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, slides[0]);
+
+  slides = Array.from(track.children);
+
+  track.style.transition = 'none';
+  track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+  function updateCarousel() {
+    track.style.transition = 'transform 0.5s ease-in-out';
+    const offset = slideWidth * currentIndex;
+    track.style.transform = `translateX(-${offset}px)`;
+  }
+
+  track.addEventListener('transitionend', () => {
+    if (slides[currentIndex] === slides[0]) {
+      track.style.transition = 'none';
+      currentIndex = slides.length - 2;
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    } else if (slides[currentIndex] === slides[slides.length - 1]) {
+      track.style.transition = 'none';
+      currentIndex = 1;
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    }
+  });
+
+  // Auto slide
+  let autoSlide = setInterval(() => {
+    currentIndex++;
+    updateCarousel();
+  }, 5000);
+
+  // Next button
+  nextButton.addEventListener('click', () => {
+    clearInterval(autoSlide);
+    currentIndex++;
+    updateCarousel();
+    // Restart auto slide
+    autoSlide = setInterval(() => {
+      currentIndex++;
+      updateCarousel();
+    }, 5000);
+  });
+
+  // Prev button
+  prevButton.addEventListener('click', () => {
+    clearInterval(autoSlide);
+    currentIndex--;
+    updateCarousel();
+    // Restart auto slide
+    autoSlide = setInterval(() => {
+      currentIndex++;
+      updateCarousel();
+    }, 5000);
+  });
+});
+</script>
 </html>
