@@ -1,4 +1,5 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
+@import url(Pages/font/fonts.css);
+
 
 *{
     text-decoration: none;
@@ -6,12 +7,35 @@
     padding: 0;
     box-sizing: border-box;
     }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.category {
+  scroll-snap-type: y mandatory; 
+}
+
+
+.page {
+  height: 100vh;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family : 'Open Sans', sans-serif;
-    background-image: rgba(0, 57, 181, 0.548);
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
+    background-color: black;
     scrollbar-width: smooth;
 }
 
@@ -21,8 +45,8 @@ body {
     font-size: 4rem;
     text-align: left; 
     position: absolute; 
-    top: 248px;
-    left: 411px;
+    top: 300px;
+    left: 500px;
     transform: translate(-50%, -50%);
     z-index: 5;
     line-height: 1.1;
@@ -33,21 +57,29 @@ body {
     display: block;
     margin-left: 6rem;
 }
+
+.page-title .line3{
+    display: block;
+    margin-left: 6rem;
+    
+}
+
 /*Nav Bar*/
+
 .navbar{
     position: fixed;              
     top: 30px;                
-    left: 50%;                     
+    left: 77%;                     
     transform: translateX(-50%);    
-    background: rgba(255, 255, 255, 0.3);  
+    background: rgba(255, 255, 255, 0);  
     border-radius: 15px;          
-    font-family: 'arial', arial;
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
     font-size: 20px;
-    padding: 12px 30px;
+    padding: 0px 50px;
     z-index: 9999;
     display : inline-block;
     justify-content: center;
-    max-width: fit-content;
+    max-width: none;
 }
 
 .navdiv{
@@ -61,9 +93,10 @@ body {
 .navbar ul{
     list-style-type: none;
     display: flex;
-    gap: 50px;
+    gap: 100px;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 .navbar ul li {
@@ -74,8 +107,10 @@ body {
 .navbar ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-weight: 100;
-    transition: 0.3s
+    transition: 0.3s;
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
+    font-weight: 40;
+    
 
 }
 .navbar ul li a:hover {
@@ -108,7 +143,7 @@ section{
     margin-top: 20%; 
     font-size: 180%;
     transform: translateX(-15%);
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
 }
 .text-box {
     grid-area: textbox;
@@ -117,15 +152,18 @@ section{
     text-align: left;
     padding: 1rem;
     transform: translateX(-12%);
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
+
+/* 3D MODEL VIEWER */
+
 }
 .model-3d {
     grid-area: model;
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 10;
-    transform: translateY(8%) translateX(-8%);
+    transform: translateY(0%) translateX(30vw);
+    width: 500px;
+    height: 500px;
 }
 
 model-viewer {
@@ -139,13 +177,28 @@ model-viewer {
     font-size:1.9rem;
 }
 
+
 /* footer */
 
 footer{
-    background-color: #bdc2f5;
-    color : white;
+    position: relative;
+    background-color: #000000;
+    color : rgb(0, 0, 0);
     text-align: center;
-    padding: 40px 20px;
+    padding: 180px 20px;
+}
+
+.footer-page {
+    width: 1500px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    
 }
 
 footer hr {
@@ -204,20 +257,20 @@ footer .footer-links ul li a:hover {
     }
 }
 
-.finisher-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; 
+/* Site title */
+
+.site-title {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    font-family: 'CabinetGrotesk-Variable', sans-serif;
+    font-weight: 900; 
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: white;
+    pointer-events: none;
+    z-index: 9999;
 }
 
-.bonnet{
-    width: 50px;
-    height: auto;
-    position:absolute;
-    top: 20%;
-    left: 13%;
-    z-index: 10;
-}
