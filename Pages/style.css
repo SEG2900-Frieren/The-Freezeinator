@@ -219,9 +219,12 @@ footer::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     color: white;
     text-align: center;
-    padding: 4rem;
+    padding: 100px 4rem 4rem 4rem;
+    height: auto;
+    min-height: 100vh;
 }
 
 /* ===== TEAM MEMBERS ===== */
