@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="Pages/style.css">
     <link rel="stylesheet" href="Pages/Product-Features_style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    
   </head>
 
 
@@ -34,39 +33,43 @@
   </nav>
   <section class="category" id="home">
     <div class ="page" id="home-page1">
+      <img class="page-image" src="HomeImages/snowflake-removebg-preview.png" alt="">
+      <img class="page-image2" src="HomeImages/snowflake-removebg-preview.png" alt="">
+      <img class="page-image3" src="HomeImages/snowflake-removebg-preview.png" alt="">
+      <img class="page-image4" src="HomeImages/snowflake-removebg-preview.png" alt="">
+      <img class="page-image5" src="HomeImages/snowflake-removebg-preview.png" alt="">
     <div class = "big-box"> 
       <div class="title"><h1>The Freezeinator 2.0</h1></div>
-      <div class="model-3d">
-          <model-viewer id="freezeinator"
-            src="HomeImages/The Freezeinator.glb"
-            camera-controls
-            disable-pan
-            disable-zoom
-            tone-mapping="neutral"
-            poster="poster.webp"
-            shadow-intensity="1"
-            auto-rotate
-            environment-image="HomeImages/aircraft.hdr"
-            min-camera-orbit="auto 44deg 5.89m"
-            max-camera-orbit="auto 135deg auto"
-            min-field-of-view="30deg"
-            camera-orbit="60deg 60deg" 
-            interaction-prompt="none"
-            alt="The Freezeinator">
-          </model-viewer>
-      </div>
     </div>
+    <button id="nextPageBtn">Discover Us</button>
     </div>
 
-    <div class="page" id="home-page2">
-      <h1>Home Page 2</h1>
+  <div class="page" id="home-page2">
+    <h1 class="sponsor-title">Trusted by the Best.</h1>
+    <div class="sponsor-container">
+      <img src="HomeImages/tesla-removebg-preview.png" class="sponsor sponsor-slow" style="top: 10%; left: 20%; opacity: 1;">
+      <img src="HomeImages/apple-removebg-preview.png" class="sponsor sponsor-slow" style="top: 5%; left: 65%; opacity: 0.8;">
+      <img src="HomeImages/samsung-removebg-preview.png" class="sponsor sponsor-slow" style="top: 50%; left: 45%; opacity: 0.8;">
+      <img src="HomeImages/Logo-red-bull-vector-transparent-PNG-removebg-preview.png" class="sponsor sponsor-medium" style="top: 35%; left: 10%; opacity: 0.6;">
+      <img src="HomeImages/lg-removebg-preview.png" class="sponsor sponsor-medium" style="top: 7%; left: 25%; opacity: 0.6;">
+      <img src="HomeImages/nestea-removebg-preview.png" class="sponsor sponsor-fast" style="top: 10%; left: 70%; opacity: 0.4;">
+      <img src="HomeImages/sephora-removebg-preview.png" class="sponsor sponsor-fast" style="top: 10%; left: 70%; opacity: 0.4;">
     </div>
+  </div>
+
     <div class="page" id="home-page3">
-      <h1>Home Page 3</h1>
+      <div class="boxes-container">
+       <div class="left-boxes">
+         <div class="box small-box">Box 1</div>
+         <div class="box small-box">Box 2</div>
+        </div>
+        <div class="box large-box">Box 3</div>
+      </div>
     </div>
   </section>
-  <section class="catgeory" id="features">
+  <section class="category" id="features">
     <div class="page" id="features-page1">
+    
     <h1>Product Features</h1>
     <p class="features-intro">
     </p>
@@ -115,6 +118,7 @@
     </div>
 
      <div class="page" id="features-page2">
+      
       <h1>Product Features Page 2</h1>
     </div>
   </section>
@@ -188,7 +192,7 @@
             </ul>
           </div>
           <div class="team">
-            <div class="img"><img src="HomeImages/Photo6.png" alt="New Member"></div>
+            <div class="img"><img src="" alt="New Member"></div>
             <h3>Zayd El Alaoui</h3>
             <p class="role">Role Here</p>
             <p class="para">Short description about this team member.</p>
@@ -197,7 +201,6 @@
               <li><a href="#"><i class="uil uil-instagram"></i></a></li>
               <li><a href="https://github.com/SEG2900-Frieren"><i class="uil uil-github"></i></a></li>
           </ul>
-        </div>
         </div>
       </div>
 
@@ -209,6 +212,7 @@
   
   <section class="category" id="contacts">
     <div class="page" id="contacts-page1">
+      <img class="page-image" src="HomeImages/snowflake-removebg-preview.png" alt="">
       <h1>Contact</h1>
       <div class="content-wrapper">
         <div class="header-text">
@@ -235,6 +239,7 @@
 
    <section class="category" id="career">
     <div class="page" id="career-page1">
+      <img class="page-image" src="HomeImages/myImage.png" alt="">
       <h1>Career</h1>
 
       <section class="search">
@@ -280,5 +285,28 @@
     <li><a href="#career-page1">Career</a></li>
   </ul>
 </footer>
+<script>
+  const btn = document.getElementById('nextPageBtn');
+  btn.addEventListener('click', () => {
+    window.location.href = "#home-page2"; 
+  });
+</script>
+<script>
+window.addEventListener("scroll", () => {
+    let scrollY = window.scrollY;
+
+    document.querySelectorAll(".sponsor-slow").forEach(el => {
+        el.style.transform = `translateY(${scrollY * 0.1}px)`;
+    });
+
+    document.querySelectorAll(".sponsor-medium").forEach(el => {
+        el.style.transform = `translateY(${scrollY * 0.3}px)`;
+    });
+
+    document.querySelectorAll(".sponsor-fast").forEach(el => {
+        el.style.transform = `translateY(${scrollY * 0.5}px)`;
+    });
+});
+</script>
 </body>
 </html>
