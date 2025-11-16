@@ -272,7 +272,7 @@ footer .footer-links ul li a:hover {
 }
 
 /* ===== JOB CARDS ===== */
-.job-card {
+.job-listings {
     background: #111;
     padding: 2rem;
     border-radius: 12px;
@@ -282,17 +282,17 @@ footer .footer-links ul li a:hover {
     transition: 0.3s;
 }
 
-.job-card:hover {
+.job-listings:hover {
     transform: scale(1.05);
     border-color: #77a0f7;
 }
 
-.job-card h2 {
+.job-listings h2 {
     margin-bottom: 1rem;
     color: white;
 }
 
-.job-card p {
+.job-listings p {
     opacity: 0.85;
     font-size: 1.1rem;
 }
@@ -407,6 +407,11 @@ footer .footer-links ul li a:hover {
 /* Icon */
 .team .social_links li a i {
     font-size: 16px;
+}
+
+.team .social_links a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Hover effect */
