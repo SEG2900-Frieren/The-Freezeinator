@@ -10,6 +10,7 @@
     <title>Frieren Appliances</title>
     <link rel="stylesheet" href="Pages/style.css">
     <link rel="stylesheet" href="Pages/Product-Features_style.css">
+    <link rel="stylesheet" href="Pages/pricing_style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   </head>
 
@@ -60,19 +61,23 @@
     <div class="page" id="home-page3">
       <div class="boxes-container">
        <div class="left-box">
-         <div class="box upperbox">Box 1</div>
-         <div class="box bottombox">Box 2</div>
+         <div class="box upperbox"></div>
+            <span class="rise-count-up1" data-target="35">0</span>+
+            <div class="box1-title"><h1>Satisfaction rate.</h1></div>
+         <div class="box bottombox"></div>
+          <span class="rise-count-up2" data-target="150">0</span>+
+          <div class="box2-title"><h1>Sales completed.</h1></div>
         </div>
-        <div class="box large-box">Box 3</div>
-      </div>
+        <div class="box large-box"></div>
+          <span class="rise-count-up3" data-target="50">0</span>+
+          <div class="box3-title"><h1>New locations to come, all around the world.</h1></div>
+          <img class="box3-image" src="HomeImages/Screenshot_2025-11-16_170807-removebg-preview.png" alt="">
     </div>
   </section>
   <section class="category" id="features">
     <div class="page" id="features-page1">
-    
     <h1>Product Features</h1>
-    <p class="features-intro">
-    </p>
+    <p class="features-intro"></p>
     <div class="features">
       <div class="feature">
         <h2>AI-Powered Temperature Control</h2>
@@ -115,21 +120,39 @@
           Includes a child-safe locking mechanism and thermal sensors to ensure safe operation at all times.
         </p>
       </div>
-    </div>
-
-     <div class="page" id="features-page2">
-      
-      <h1>Product Features Page 2</h1>
+    </div>  
     </div>
   </section>
-
-
   <section class="category" id="pricing">
     <div class="page" id="pricing-page1">
-    <h1>Pricing</h1>
-    <p>$200</p>
     </div>
+    <p class = "pricing-intro">Freeze fast, Live easy — without overpaying.
+The Freezinator gives you cutting-edge cooling power at a fair, transparent price.
+Choose your model, and experience instant chill made simple.</p>
+    <section class = "models">
+      <div class = "model">
+        <div class = "text">
+          <h2>Premium Model</h2>
+          <p>The latest model with ALL the newest features!</p>
+          <p class = "price">$1999 <span>one-time purchase</span></p>
+        </div>
+        <div class="crop">
+        <img src="HomeImages/2dmodelfreezenobg.png" alt="Freezeinator Premium">
+        </div>
+      </div>
+
+      <div class = "model">
+        <div class="crop">
+        <img src="HomeImages/2dmodelfreezenobg.png" alt="Freezeinator Base Model">
+        </div>
+        <div class="text">
+          <h2>Base Model</h2>
+          <p>Built to last, the base model freezeinator is a powerful freezing machine!</p>
+          <p class ="price" >$1499 <span>one-time purchase</span></p>
+        </div>
+      </div>
   </section>
+
   <section class="category" id="team">
     <div class="page" id="team-page1">
       <h1>Meet our amazing team</h1>
@@ -203,13 +226,9 @@
           </ul>
         </div>
       </div>
-
-        </div>
-      </div>
     </div>
+  </div>
   </section>
-
-  
   <section class="category" id="contacts">
     <div class="page" id="contacts-page1">
       <img class="page-image" src="HomeImages/snowflake-removebg-preview.png" alt="">
@@ -279,11 +298,13 @@
   </section>
             
 <footer>
-  <div class="footer-page"></div>
-  <ul>
-    <li><a href="#contacts-page1">Contacts</a></li>
-    <li><a href="#career-page1">Career</a></li>
-  </ul>
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="career.html">Career</a>
+      <a href="contacts.html">Contact</a>
+    </div>
+    <div class="footer-brand">FRIEREN</div>
+  </div>
 </footer>
 <script>
   const btn = document.getElementById('nextPageBtn');
@@ -306,6 +327,57 @@ window.addEventListener("scroll", () => {
     document.querySelectorAll(".sponsor-fast").forEach(el => {
         el.style.transform = `translateY(${scrollY * 0.5}px)`;
     });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = [
+    { el: document.querySelector('.rise-count-up1'), target: 98, suffix: '%' },
+    { el: document.querySelector('.rise-count-up2'), target: 150, suffix: 'k+' },
+    { el: document.querySelector('.rise-count-up3'), target: 50, suffix: '+' }
+  ];
+
+  const formatNumber = (number) => number.toLocaleString();
+
+  const animateCount = (counterObj) => {
+    const counter = counterObj.el;
+    const target = counterObj.target;
+    const suffix = counterObj.suffix;
+    let startTime = null;
+    const duration = 3000;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      let progress = elapsed / duration;
+      if (progress > 1) progress = 1;
+
+      counter.textContent = formatNumber(Math.floor(progress * target)) + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        counter.textContent = formatNumber(target) + suffix;
+      }
+    };
+
+    requestAnimationFrame(animate);
+  };
+
+  const observerOptions = { threshold: 0.5 };
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        const counterObj = counters.find(c => c.el === entry.target);
+        animateCount(counterObj);
+        entry.target.classList.add('counted');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  counters.forEach(counterObj => observer.observe(counterObj.el));
 });
 </script>
 </body>

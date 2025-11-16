@@ -18,10 +18,9 @@ h1 {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 170px; 
-    justify-items: center; 
-
+    grid-template-columns: repeat(3, 300px); 
+    gap: 170px;
+    justify-content: center;
 }
 
 .feature {
@@ -53,7 +52,7 @@ h1 {
 
 @media (max-width: 1000px) {
     .features {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1px;
         justify-items: center;
     }

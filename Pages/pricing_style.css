@@ -1,0 +1,56 @@
+main {
+    max-width: 1500px;
+    margin: 4rem auto 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.models {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 50px;
+}
+
+.model {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    gap: 40px;
+    text-align: left;
+    padding: 175px 100px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px rgb(187, 187, 187);
+    background-color: hwb(0 0% 100%);
+    transition: transform 0.5s;
+
+}
+
+.model:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.text {
+    text-align: center;
+    color:white;
+}
+
+.pricing-intro {
+    padding: 0px 15vw;
+    color: white;
+    text-align: center;
+    font-size: 125%;
+}
+
+.crop {
+    width: 75%; 
+    height: 100%;  
+    overflow: hidden; 
+}
+
+.crop img {
+    width: 100%;
+}

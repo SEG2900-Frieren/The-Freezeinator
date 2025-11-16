@@ -168,46 +168,50 @@ section {
 
 /* ================= FOOTER ================= */
 footer {
+    background-color: #000; 
+    color: white;
+    padding: 30px 50px;
     position: relative;
-    background-color: #000;
-    color: #000;
-    text-align: center;
-    padding: 180px 20px;
+    font-family: 'League Spartan', sans-serif;
 }
 
-.footer-page {
-    width: 1500px;
-    height: 300px;
-    background-color: #fff;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 130px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+footer::before {
+    content: "";
+    display: block;
+    height: 2px; 
+    width: 90%; 
+    max-width: 1200px;
+    margin: 0 auto 20px auto; 
+    background-color: white;
 }
 
-footer hr {
-    border: 1px solid #bcc7f7;
-    margin-bottom: 20px;
-}
-
-footer .footer-links ul {
-    list-style: none;
+.footer-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-footer .footer-links ul li a {
-    color: #fff;
+.footer-links a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin-right: 30px;
+    font-weight: 500;
+    transition: opacity 0.3s;
 }
 
-footer .footer-links ul li a:hover {
-    color: #77a0f7;
+.footer-links a:last-child {
+    margin-right: 0;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* ================= TEAM / CAREER / CONTACT PAGES ================= */
@@ -570,8 +574,8 @@ footer .footer-links ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* prend toute la hauteur de la page */
-  padding: 40px; /* un peu d’espace autour */
+  height: 100vh; 
+  padding: 40px;
 }
 
 .boxes-container {
@@ -600,18 +604,104 @@ footer .footer-links ul li a:hover {
   font-size: 24px;
   transition: 0.3s ease-in-out;
   text-shadow: 1px 1px 2px #aaa;
-  flex: 1; 
+  flex: 1;
+  position: relative
 }
 
-.upperbox, .bottombox {
-  min-height: 0; 
+.upperbox{
+    position: absolute;
+    height : 250px;
+    width : 500px;
+    top: 1950px;
+    left: 150px;
+} 
+
+.bottombox{
+    position: absolute;
+    height : 250px;
+    width : 500px;
+    top: 2210px;
+    left: 150px;
 }
+
 
 .large-box {
-  flex: 1.5; 
-  min-height: 100%;
+    position: absolute;
+    height: 510px;
+    width: 800px;
+    top: 1950px;
+    left: 700px; 
 }
 
 .box:hover {
-  box-shadow: 0 0 35px white;
+  box-shadow: 0 0 35px rgb(119, 119, 119);
+}
+
+
+.rise-count-up1 {
+    position: absolute;
+    top: 2040px;
+    left: 180px;
+    font-size: 90px;
+    color: rgba(173, 209, 255);
+    font-weight: bold;
+}
+
+
+.rise-count-up2 {
+    position: absolute;
+    top: 2300px;
+    left: 180px;
+    font-size: 90px;
+    color: rgba(173, 209, 255);
+    font-weight: bold;
+}
+
+
+.rise-count-up3 {
+    position: absolute;
+    top: 2280px;
+    left: 730px;
+    font-size: 90px;
+    color: rgba(173, 209, 255);
+    font-weight: bold;
+
+}
+
+.box1-title{
+    position: absolute;
+    top: 2130px;
+    left: 180px;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+
+.box2-title{
+    position: absolute;
+    top: 2385px;
+    left: 180px;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.box3-title{
+    position: absolute;
+    top: 2380px;
+    left: 720px;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.box3-image{
+    position: absolute;
+    top: 1900px;
+    left: 1000px;
+    height: 500px;
+    width: 500px;
+    
+
 }
