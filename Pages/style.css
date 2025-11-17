@@ -1,6 +1,6 @@
 @import url(Pages/font/fonts.css);
 
-/* ================= GENERAL RESET ================= */
+/* ================= GENERAL ================= */
 * {
     text-decoration: none;
     margin: 0;
@@ -19,7 +19,6 @@ html, body {
 
 body {
     min-height: 100vh;
-    scrollbar-width: smooth;
 }
 
 /* ================= PAGE STRUCTURE ================= */
@@ -345,7 +344,6 @@ button:hover {
     width: 100%;
     max-width: 400px;
     border: 1px solid #aca8a8c3;
-    transition: transform 0.3s, border-colour 0.3s;
   }
 
 /* ================= TEAM CAROUSEL ================= */
