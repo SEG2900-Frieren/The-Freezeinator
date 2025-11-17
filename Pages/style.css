@@ -356,16 +356,6 @@ button:hover {
   transition: transform 0.3s, border-color 0.3s;
 }
 
-<<<<<<< HEAD
-  .job-listings li {
-    padding: 1.5rem;
-    margin-bottom: 5%;
-    border-radius:12px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #aca8a8c3;
-  }
-=======
 .job-listings li a{
     color: white;
 }
@@ -388,7 +378,6 @@ button:hover {
   min-width: 150px; 
   max-width: 250px;
 }
->>>>>>> e368c95ba3266166f2c78572a56f96c47033eaad
 
 /* ================= TEAM CAROUSEL ================= */
 .team_section {
