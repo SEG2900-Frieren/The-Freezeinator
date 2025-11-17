@@ -1,70 +1,67 @@
-/* ================= GENERAL & INTRO ================= */
-
 main {
     max-width: 1500px;
     margin: 4rem auto 0 auto;
-    padding: 40px 20px;
     text-align: center;
 }
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.pricing-intro {
-    max-width: 800px;
-    margin: 0 auto 50px auto; 
-    color: white;
-    text-align: center;
-    font-size: 125%;
-}
-
-/* ================= MODEL CONTAINERS ================= */
 
 .models {
     display: flex;
     flex-direction: column;
-    width: 90%; 
-    margin: 0 auto; 
-    gap: 80px;
-    padding: 50px 0;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .model {
     display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    gap: 40px;
-    text-align: left;
-    padding: 50px 100px; 
-    border-radius: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 70rem;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 10px; 
+    border-radius: 30px;
     box-shadow: 0 0 6px rgb(187, 187, 187);
     background-color: hwb(0 0% 100%);
     transition: transform 0.5s;
+    height: fit-content; 
 }
-
+model-viewer {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    display: block;
+}
 .model:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
-/* ================= TEXT & IMAGE CONTENT ================= */
-
 .text {
-
-    flex: 1; 
     text-align: center;
-    color:white;
+    width: 500px;
+    height: -100px;
+    left: 700px;
+    bottom: 1000px;
+    padding: 0 20px;
+}
+.text h2{
+        color:white;
+}
+.text p{
+    color:#ccc;
 }
 
-
-.crop {
-    flex: 1;
-    height: 100%;
-    overflow: hidden; 
+.pricing-intro {
+    padding: 0px 15vw;
+    color: white;
+    text-align: center;
+    font-size: 125%;
 }
 
-.crop img {
-    width: 100%;
+@media (max-width: 800px) {
+    .model {
+        width: 30rem;
+    }
 }
