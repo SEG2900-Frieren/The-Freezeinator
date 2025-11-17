@@ -1,27 +1,47 @@
+/* ================= GENERAL & INTRO ================= */
+
 main {
     max-width: 1500px;
     margin: 4rem auto 0 auto;
+    padding: 40px 20px;
     text-align: center;
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-intro {
+    max-width: 800px;
+    margin: 0 auto 50px auto; 
+    color: white;
+    text-align: center;
+    font-size: 125%;
+}
+
+/* ================= MODEL CONTAINERS ================= */
+
 .models {
+    display: flex;
     flex-direction: column;
-    padding: 0px;
+    width: 90%; 
+    margin: 0 auto; 
+    gap: 80px;
+    padding: 50px 0;
 }
 
 .model {
-    align-items: center;
+    display: flex;
+    align-items: center; 
     justify-content: space-between;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    gap: 80px;
+    gap: 40px;
     text-align: left;
-    padding: 175px 100px;
+    padding: 50px 100px; 
     border-radius: 50px;
     box-shadow: 0 0 6px rgb(187, 187, 187);
     background-color: hwb(0 0% 100%);
     transition: transform 0.5s;
-
 }
 
 .model:hover {
@@ -29,26 +49,19 @@ main {
     box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
+/* ================= TEXT & IMAGE CONTENT ================= */
+
 .text {
+
+    flex: 1; 
     text-align: center;
     color:white;
-    width: 500px;
-    height: -100px;
-    left: 700px;
-    bottom: 1000px;
-    padding: 0 20px;
 }
 
-.pricing-intro {
-    padding: 0px 15vw;
-    color: white;
-    text-align: center;
-    font-size: 125%;
-}
 
 .crop {
-    flex: 0;
-    height: 100%;  
+    flex: 1;
+    height: 100%;
     overflow: hidden; 
 }
 
