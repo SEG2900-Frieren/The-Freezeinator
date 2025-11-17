@@ -244,38 +244,73 @@ footer::before {
 }
 
 /* ===== CONTACT FORM ===== */
-.contact-form {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    gap: 1rem;
+body {
+      display: flex;
+      justify-content: center;  
+      align-items: center;    
+      min-height: 100vh;      
+      margin: 0; 
+}
+.header-text {
+        width: 109%;
+        margin-top: 140px;
+        text-align: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    background: #222;
-    color: white;
-    outline: none;
-    font-size: 1rem;
+h1, h3 {
+        display: block;
+        margin-top: 15px 0 ;
+        color: white;
+        padding-bottom: 20px ;
+}
+.contact-container {
+        background-color: rgb(251, 254, 255);
+        padding: 40px;
+        justify-content: center;
+        border-radius: 86px;
+        box-shadow: 0 4px 20px rbg(#ffffff);
+        max-width: 450px;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-container:hover {
+      transition: scale(1.02);
+      box-shadow: 0 8px 20px rgba(254, 255, 255, 0.881);
 }
 
-.contact-form button {
-    padding: 14px;
-    border-radius: 10px;
-    background: white;
-    color: black;
+form {
+     display: flex;
+     flex-direction: column;
+}
+
+label{
+    margin-top: 15px;
+    margin-bottom: 8px;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background: #77a0f7;
-    color: white;
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background-color: rgba(49, 46, 46, 0.583);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 11px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: rgba(217, 238, 238, 0.572);
 }
 
 /* ===== JOB CARDS ===== */
