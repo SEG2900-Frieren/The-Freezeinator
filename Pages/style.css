@@ -244,12 +244,13 @@ footer::before {
 }
 
 /* ===== CONTACT FORM ===== */
-contacts {
+.contacts {
       display: flex;
       justify-content: center;  
       align-items: center;    
       min-height: 100vh;      
       margin: 0; 
+      flex-direction: column;
 }
 .header-text {
         width: 109%;
