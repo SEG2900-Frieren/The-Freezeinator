@@ -123,8 +123,10 @@
     </div>
   </section>
   <section class="category" id="pricing">
+          <p class = "pricing-intro">Freeze fast, Live easy — without overpaying.
+The Freezinator gives you cutting-edge cooling power at a fair, transparent price.
+Choose your model, and experience instant chill made simple.</p>
     <div class="page" id="pricing-page1">
-      <p class = "pricing-intro">Freeze fast, Live easy — without overpaying. The Freezinator gives you cutting-edge cooling power at a fair, transparent price. Choose your model, and experience instant chill made simple.</p>
       <section class = "models">
         <div class = "model">
           <div class = "text">
@@ -132,25 +134,51 @@
             <p>The latest model with ALL the newest features!</p>
             <p class = "price">$1999 <span>one-time purchase</span></p>
           </div>
-          <div class="crop">
-            <img src="HomeImages/2dmodelfreezenobg.png" alt="Freezeinator Premium">
-          </div>
+            <model-viewer id="freezeinator"
+              src="HomeImages/The Freezeinator.glb"
+              camera-controls
+              disable-pan
+              disable-zoom
+              tone-mapping="neutral"
+              poster="poster.webp"
+              shadow-intensity="1"
+              auto-rotate
+              environment-image="HomeImages/aircraft.hdr"
+              min-camera-orbit="auto 44deg 5.89m"
+              max-camera-orbit="auto 135deg auto"
+              min-field-of-view="30deg"
+              camera-orbit="60deg 60deg" 
+              interaction-prompt="none"
+              alt="The Freezeinator">
+            </model-viewer>
         </div>
-
-        <div class = "model">
-          <div class="crop">
-            <img src="HomeImages/2dmodelfreezenobg.png" alt="Freezeinator Base Model">
-          </div>
+        <div class = "model"> 
           <div class="text">
             <h2>Base Model</h2>
-            <p>Built to last, the base model freezeinator is a powerful freezing machine!</p>
+            <p>Built to last, the base model freezeinator is a powerful freezing tool!</p>
             <p class ="price" >$1499 <span>one-time purchase</span></p>
           </div>
+            <model-viewer id="freezeinator"
+              src="HomeImages/The Freezeinator.glb"
+              camera-controls
+              disable-pan
+              disable-zoom
+              tone-mapping="neutral"
+              poster="poster.webp"
+              shadow-intensity="1"
+              auto-rotate
+              environment-image="HomeImages/aircraft.hdr"
+              min-camera-orbit="auto 44deg 5.89m"
+              max-camera-orbit="auto 135deg auto"
+              min-field-of-view="30deg"
+              camera-orbit="60deg 60deg" 
+              interaction-prompt="none"
+              alt="The Freezeinator">
+            </model-viewer>
         </div>
       </section>
-    </div>
-  </section>
-  <section class="category" id="team">
+      </div>
+  </section>  <section class="category" id="team">
     <div class="page" id="team-page1">
       <h1>Meet our amazing team</h1>
       <p>This final product was achieved thanks to this wonderful team.</p>
