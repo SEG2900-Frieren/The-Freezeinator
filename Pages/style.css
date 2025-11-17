@@ -319,7 +319,8 @@ button:hover {
 
 .job-listings {
   width: 100%;
-  max-width: none; 
+  max-width: none;
+  margin-top: 20px;
   margin: 0; 
 }
 
@@ -336,6 +337,7 @@ button:hover {
 }
 
 .job-listings h2 {
+    margin-top: 20px; 
     margin-bottom: 1rem;
     color: white;
     font-size: 30px;
@@ -359,24 +361,34 @@ button:hover {
     color: white;
 }
 
+
 .search form {
   display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
   justify-content: center;
   align-items: center;
-  gap: 10px; 
-  flex-wrap: wrap; 
 }
 .search h2 {
    color: white;
    font-size:45px;
 }
 .search input[type="text"] {
+  flex: 1 1 200px; 
   padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 4px; 
-  width: 250px;/
-  max-width: 100%; 
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: rgba(49, 46, 46, 0.583);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 /* ================= TEAM CAROUSEL ================= */
