@@ -316,19 +316,23 @@ button:hover {
 }
 
 /* ===== JOB CARDS ===== */
+
 .job-listings {
-    width: 100%;
-    max-width: 100px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: none; 
+  margin: 0; 
 }
 
 .job-listings ul {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10rem;
-    padding: 0;
-    margin: 0.5rem;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; 
+  padding: 0;
+  margin: 0;
+}
+.job-listings li:hover {
+    transform: scale(1.05);
+    border-color: #ffffff;
 }
 
 .job-listings h2 {
@@ -336,46 +340,44 @@ button:hover {
     color: white;
     font-size: 30px;
 }
-
 .job-listings p {
     opacity: 0.85;
     font-size: 1.1rem;
     color: white;
 }
+
 .job-listings li {
-    padding: 2rem;
-    margin-bottom: 5%;
-    border-radius:12px;
-    width: 100%;
-    max-width: none;
-    font-size: 1.2rem;
-    border: 1px solid #aca8a8c3;
-    transition: transform 0.3s, border-colour 0.3s;
-  }
+  padding: 2rem;
+  margin-bottom: 1rem; 
+  border-radius: 12px;
+  font-size: 1.2rem;
+  border: 1px solid #aca8a8c3;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
 .job-listings li a{
     color: white;
 }
 
-.job-listings li:hover {
-    transform: scale(1.05);
-    border-color: #ffffff;
+.search form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  flex-wrap: wrap; 
 }
- .search form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
- .search h2 {
+.search h2 {
    color: white;
    font-size:45px;
 }
-  .search input[type="text"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 4px; 
-  }
+.search input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px; 
+  width: 250px;/
+  max-width: 100%; 
+}
 
 /* ================= TEAM CAROUSEL ================= */
 .team_section {
