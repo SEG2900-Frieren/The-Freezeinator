@@ -329,14 +329,11 @@ button:hover {
     margin: 0.5rem;
     list-style: none;
 }
-.job-listings li:hover {
-    transform: scale(1.05);
-    border-color: #ffffff;
-}
 
-.job-listings h2,h3 {
+.job-listings h2 {
     margin-bottom: 1rem;
     color: white;
+    font-size: 30px;
 }
 
 .job-listings p {
@@ -344,8 +341,6 @@ button:hover {
     font-size: 1.1rem;
     color: white;
 }
-
-
 .job-listings li {
     padding: 2rem;
     margin-bottom: 5%;
@@ -356,10 +351,30 @@ button:hover {
     border: 1px solid #aca8a8c3;
     transition: transform 0.3s, border-colour 0.3s;
   }
-
 .job-listings li a{
     color: white;
 }
+
+.job-listings li:hover {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+ .search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .search h2 {
+   color: white;
+   font-size:45px;
+}
+  .search input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px; 
+  }
 
 /* ================= TEAM CAROUSEL ================= */
 .team_section {
