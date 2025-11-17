@@ -279,19 +279,17 @@ footer::before {
 }
 
 /* ===== JOB CARDS ===== */
-.job-listings {
-    background: #111;
-    padding: 2rem;
-    border-radius: 12px;
-    width: 400px;
-    border: 1px solid #444;
-    margin-top: 2rem;
-    transition: 0.3s;
+.job-listings ul {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+    padding: 0;
+    margin: 2rem;
+    list-style: none;
 }
-
-.job-listings:hover {
+.job-listings li:hover {
     transform: scale(1.05);
-    border-color: #77a0f7;
+    border-color: #ffffff;
 }
 
 .job-listings h2 {
@@ -303,6 +301,17 @@ footer::before {
     opacity: 0.85;
     font-size: 1.1rem;
 }
+
+
+  .job-listings li {
+    padding: 1.5rem;
+    margin-bottom: 5%;
+    border-radius:12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #aca8a8c3;
+    transition: transform 0.3s, border-colour 0.3s;
+  }
 
 /* ================= TEAM CAROUSEL ================= */
 .team_section {
